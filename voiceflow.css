@@ -228,17 +228,26 @@
   padding: 0 !important;
 }
 
+/* Arrow icon – thinner / smaller inside the circle */
 .vfrc-chat-input__send-icon,
 .vfrc-chat-input__send .vfrc-icon,
 .vfrc-chat-input--button .vfrc-icon,
 .vfrc-chat-input__send svg,
-.vfrc-chat-input--button svg,
-.vfrc-chat-input__send path,
-.vfrc-chat-input--button path {
+.vfrc-chat-input--button svg {
   color: #ffffff !important;
   fill: #ffffff !important;
   stroke: #ffffff !important;
+  transform: scale(0.8) !important;          /* tweak this: 0.85 / 0.75 etc. */
+  transform-origin: center center !important;
 }
+
+/* Path stays white */
+.vfrc-chat-input__send path,
+.vfrc-chat-input--button path {
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
 
 
 /* ============================================================
