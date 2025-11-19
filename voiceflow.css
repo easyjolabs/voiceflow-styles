@@ -1,17 +1,78 @@
-/* Font size override */
+.vfrc-system-response {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+.vfrc-system-response .vfrc-message {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+.vfrc-widget,
+.vfrc-widget--embedded,
+.vfrc-chat,
+.vfrc-body,
+.vfrc-assistant-container {
+  background: #ffffff !important;
+}
+
+.vfrc-header {
+  background-color: #ffffff !important;
+}
+
+.vfrc-assistant-info-title {
+  color: #000000 !important;
+}
+
+.vfrc-header__icon,
+.vfrc-header__button,
+.vfrc-icon {
+  fill: #000000 !important;
+  stroke: #000000 !important;
+  color: #000000 !important;
+}
+
+/* === Font-size overrides === */
+
 .vfrc-message,
-.vfrc-message p,
+.vfrc-message .markdown,
+.vfrc-message p {
+  font-size: 1.1rem !important;
+  line-height: 1.45 !important;
+}
+
+/* User messages */
 .vfrc-user-response,
-.vfrc-chat-input,
+.vfrc-user-response div {
+  font-size: 1.1rem !important;
+  line-height: 1.45 !important;
+}
+
+/* Chat input field */
+.vfrc-chat-input {
+  font-size: 1.1rem !important;
+  line-height: 1.45 !important;
+}
+
+/* Buttons in chat */
 .vfrc-button {
   font-size: 1.1rem !important;
   line-height: 1.45 !important;
 }
 
-/* Custom form elements */
+/* Custom form fields & labels */
 .vf-card,
 .vf-card .vf-input,
 .vf-card .vf-label,
-.vf-card .vf-error {
+.vf-card .vf-error,
+.vf-card button,
+.vf-card div {
   font-size: 1.1rem !important;
+  line-height: 1.45 !important;
 }
