@@ -143,43 +143,18 @@
   box-shadow: none !important;
 }
 
-/* ============================================================
-   INPUT FIELD — CUSTOM FOCUS COLOR
-   ============================================================ */
-.vfrc-input:focus,
-.vfrc-input:focus-visible {
-  outline: 2px solid #AAF8BA !important;
-  border-color: #AAF8BA !important;
-  box-shadow: 0 0 0 3px rgba(170, 248, 186, 0.2) !important;
-}
 
 /* ============================================================
    INPUT FIELD — REMOVE BLUE, ADD GREEN ONLY
    ============================================================ */
-.vfrc-input-container:focus-within,
-.vfrc-input-container:focus,
-._1gdvh9t2:focus-within,
-._1gdvh9t2:focus {
-  outline: 2px solid #AAF8BA !important;
-  outline-color: #AAF8BA !important;
-  outline-offset: 0px !important;
-  border: 2px solid #AAF8BA !important;
-  border-color: #AAF8BA !important;
-  box-shadow: 0 0 0 3px rgba(170, 248, 186, 0.3) !important;
-}
-
-/* Remove any default browser focus styles */
-textarea.vfrc-chat-input:focus,
-textarea.vfrc-chat-input:focus-visible,
-.vfrc-chat-input:focus,
-.vfrc-chat-input:focus-visible {
-  outline: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* Remove blue from any parent elements */
-._1gdvh9t0:focus-within {
-  outline: none !important;
-  border: none !important;
-}
+const style = document.createElement('style');
+style.textContent = `
+  ._1gdvh9t7._1gdvh9t9 {
+    box-shadow: none !important;
+  }
+  ._1gdvh9t2:focus-within {
+    outline: 2px solid #AAF8BA !important;
+    border: 2px solid #AAF8BA !important;
+  }
+`;
+document.head.appendChild(style);
