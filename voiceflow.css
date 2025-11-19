@@ -113,7 +113,6 @@
 
 /* ============================================================
    FOOTER — REMOVE ALL SHADOWS / GRADIENTS
-   (BUT NO INPUT FIELD STYLE OVERRIDES)
    ============================================================ */
 
 .vf-footer,
@@ -127,26 +126,6 @@
   background-image: none !important;
   box-shadow: none !important;
   border: none !important;
-}
-
-
-/* ============================================================
-   INPUT FIELD — RETURN TO NATIVE (REMOVE ALL CUSTOM STYLES)
-   ============================================================ */
-
-/* Remove ANY leftover overrides */
-.vfrc-input-container,
-.vfrc-input-container *,
-.vfrc-chat-input,
-.vfrc-chat-input *,
-.vfrc-input-container > div:first-child {
-  all: unset !important;
-}
-
-.vfrc-input-container {
-  display: flex !important;
-  align-items: center !important;
-  width: 100% !important;
 }
 
 
