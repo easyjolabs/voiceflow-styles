@@ -41,21 +41,13 @@
   padding: 0.5rem 0 !important;
 }
 
-/* Typing / loading indicator → fully transparent */
+/* Typing indicator transparent */
 .vfrc-system-response--indicator,
 .vfrc-system-response--indicator *,
-.vfrc-system-response--indicator .vfrc-message,
-.vfrc-system-response--indicator::before,
-.vfrc-system-response--indicator::after,
-.vfrc-system-response--indicator .vfrc-message::before,
-.vfrc-system-response--indicator .vfrc-message::after,
-.vfrc-system-response--indicator [class*="gdvh"],
-.vfrc-system-response--indicator [class*="gdvh"]::before,
-.vfrc-system-response--indicator [class*="gdvh"]::after {
+.vfrc-system-response--indicator .vfrc-message {
   background: transparent !important;
-  box-shadow: none !important;
   border: none !important;
-  content: none !important;
+  box-shadow: none !important;
 }
 
 
@@ -109,7 +101,7 @@
   transform: translateY(0);
 }
 
-/* Links styled like chips */
+/* Link chips */
 .vfrc-system-response a {
   background: #f2f2f2 !important;
   border-radius: 100px !important;
@@ -120,88 +112,46 @@
 
 
 /* ============================================================
-   FOOTER — REMOVE GRADIENT, SHADOW, FADE
+   FOOTER — REMOVE ALL SHADOWS / GRADIENTS
+   (BUT NO INPUT FIELD STYLE OVERRIDES)
    ============================================================ */
 
 .vf-footer,
 .vfrc-footer--watermark,
 .vfrc-footer__content,
-._1vj16245,
-._1gdvh9t0,
 .vfrc-footer__links,
 .vfrc-footer__content-scroll-to-bottom,
 .vfrc-footer__content::before,
-.vfrc-footer__content::after,
-._1vj16245::before,
-._1vj16245::after,
-._1gdvh9t0::before,
-._1gdvh9t0::after,
-.vfrc-footer__links::before,
-.vfrc-footer__links::after,
-.vfrc-footer__content-scroll-to-bottom::before,
-.vfrc-footer__content-scroll-to-bottom::after {
+.vfrc-footer__content::after {
   background: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
   border: none !important;
-  content: none !important;
-  filter: none !important;
 }
 
 
 /* ============================================================
-   INPUT FIELD — GREY OUTLINE + SHADOW
+   INPUT FIELD — RETURN TO NATIVE (REMOVE ALL CUSTOM STYLES)
    ============================================================ */
 
-/* Outer wrapper (height + spacing only) */
-.vfrc-input-container {
-  background: transparent !important;
-  padding: 0.7rem 1rem !important; /* ~15% taller */
-  min-height: 3.2rem !important;
-  border-radius: 100px !important;
-  border: none !important; /* no border here */
-  box-shadow: none !important;
-  outline: none !important;
-  display: flex;
-  align-items: center;
-}
-
-.vfrc-input-container:focus,
-.vfrc-input-container:focus-within {
-  border: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-/* This inner div is the visible border layer */
+/* Remove ANY leftover overrides */
+.vfrc-input-container,
+.vfrc-input-container *,
+.vfrc-chat-input,
+.vfrc-chat-input *,
 .vfrc-input-container > div:first-child {
-  border-radius: 100px !important;
-  border: 1px solid #E5E6EA !important;                  /* always grey */
-  background: transparent !important;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) !important;  /* base shadow */
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  all: unset !important;
 }
 
-/* Hover / focus → more shadow, border stays grey */
-.vfrc-input-container:hover > div:first-child,
-.vfrc-input-container:focus-within > div:first-child {
-  border-color: #E5E6EA !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10) !important;
-}
-
-/* Textarea itself */
-.vfrc-chat-input {
-  background: transparent !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  color: #000000 !important;
-  resize: none !important;
+.vfrc-input-container {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
 }
 
 
 /* ============================================================
-   CARDS / IMAGES
+   CARDS / IMAGES (keep clean)
    ============================================================ */
 
 .vfrc-card--content,
