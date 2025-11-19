@@ -234,7 +234,7 @@
   color: #ffffff !important;
   fill: #ffffff !important;
   stroke: #ffffff !important;
-  transform: scale(0.8) !important;          /* tweak this: 0.85 / 0.75 etc. */
+  transform: scale(0.6) !important;          /* tweak this: 0.85 / 0.75 etc. */
   transform-origin: center center !important;
 }
 
