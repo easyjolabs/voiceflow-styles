@@ -173,23 +173,20 @@
   outline: none !important;
 }
 
-/* Inner element – visible grey outline + base shadow (even inactive) */
-._1gdvh9t7,
-._1gdvh9t9 {
+/* This inner div is the visible border layer */
+.vfrc-input-container > div:first-child {
   border-radius: 100px !important;
-  border: 1px solid #E5E6EA !important;                       /* grey outline */
+  border: 1px solid #E5E6EA !important;                  /* always grey */
   background: transparent !important;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) !important;       /* base shadow */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) !important;  /* base shadow */
   transition: box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
-/* Hover / active → slightly more shadow */
-.vfrc-input-container:hover ._1gdvh9t7,
-.vfrc-input-container:hover ._1gdvh9t9,
-.vfrc-input-container:focus-within ._1gdvh9t7,
-.vfrc-input-container:focus-within ._1gdvh9t9 {
-  border-color: #E5E6EA !important;                           /* stay grey */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10) !important;       /* stronger shadow */
+/* Hover / focus → more shadow, border stays grey */
+.vfrc-input-container:hover > div:first-child,
+.vfrc-input-container:focus-within > div:first-child {
+  border-color: #E5E6EA !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10) !important;
 }
 
 /* Textarea itself */
@@ -204,132 +201,6 @@
 
 
 /* ============================================================
-   SEND BUTTON
-   ============================================================ */
-
-.vfrc-chat-input__send,
-.vfrc-chat-input--button {
-  background: #000000 !important;
-  border-radius: 50% !important;
-  border: 1px solid #000000 !important;
-  width: 36px !important;
-  height: 36px !important;
-  min-width: 36px !important;
-  min-height: 36px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
-/* Arrow icon (slightly smaller visually) */
-.vfrc-chat-input__send-icon,
-.vfrc-chat-input__send .vfrc-icon,
-.vfrc-chat-input--button .vfrc-icon,
-.vfrc-chat-input__send svg,
-.vfrc-chat-input--button svg {
-  color: #ffffff !important;
-  fill: #ffffff !important;
-  stroke: #ffffff !important;
-  transform: scale(0.85) !important;
-  transform-origin: center center !important;
-}
-
-.vfrc-chat-input__send path,
-.vfrc-chat-input--button path {
-  fill: #ffffff !important;
-  stroke: #ffffff !important;
-}
-
-
-/* ============================================================
-   SCROLL-DOWN / RESTART BUTTON
-   ============================================================ */
-
-/* Scroll-down button circle with grey background */
-.vfrc-footer__content-scroll-to-bottom-button,
-._1cosygz0,
-._1cosygz1 {
-  background: #F2F2F2 !important;
-  border-radius: 50% !important;
-  width: 36px !important;
-  height: 36px !important;
-  min-width: 36px !important;
-  min-height: 36px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-/* Icon inside scroll button → black */
-.vfrc-footer__content-scroll-to-bottom-button svg,
-.vfrc-footer__content-scroll-to-bottom-button path,
-._1cosygz0 svg,
-._1cosygz0 path,
-._1cosygz1 svg,
-._1cosygz1 path {
-  color: #000000 !important;
-  fill: #000000 !important;
-  stroke: #000000 !important;
-}
-
-/* Optional hover effect */
-.vfrc-footer__content-scroll-to-bottom-button:hover,
-._1cosygz0:hover,
-._1cosygz1:hover {
-  background: #E6E6E6 !important;
-}
-
-
-
-/* ============================================================
-   MOVE RESTART BUTTON NEXT TO SEND
-   ============================================================ */
-
-/* Style + reposition the built-in restart button from header down near the input.
-   We target common patterns: title/aria-label "Restart" and classes containing 'restart'. */
-
-.vfrc-header button[title="Restart"],
-.vfrc-header button[aria-label="Restart"],
-.vfrc-header .vfrc-restart-button,
-.vfrc-header [class*="restart"] {
-  position: fixed !important;          /* detach from header and pin near footer */
-  right: 72px !important;              /* slightly left of send button */
-  bottom: 32px !important;             /* align vertically with input bar */
-  width: 36px !important;
-  height: 36px !important;
-  min-width: 36px !important;
-  min-height: 36px !important;
-  border-radius: 50% !important;
-  background: #F2F2F2 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border: none !important;
-  box-shadow: none !important;
-  cursor: pointer !important;
-  z-index: 9999 !important;
-}
-
-/* Restart icon itself → black thin line */
-.vfrc-header button[title="Restart"] svg,
-.vfrc-header button[title="Restart"] path,
-.vfrc-header button[aria-label="Restart"] svg,
-.vfrc-header button[aria-label="Restart"] path,
-.vfrc-header .vfrc-restart-button svg,
-.vfrc-header .vfrc-restart-button path,
-.vfrc-header [class*="restart"] svg,
-.vfrc-header [class*="restart"] path {
-  color: #000000 !important;
-  fill: none !important;
-  stroke: #000000 !important;
-  stroke-width: 1.5 !important;
-}
-
-/* ============================================================
    CARDS / IMAGES
    ============================================================ */
 
@@ -342,22 +213,3 @@
   border: none !important;
   box-shadow: none !important;
 }
-
-/* ===== FINAL FIX: input border always grey ===== */
-
-/* This inner div is always the visible border layer */
-.vfrc-input-container > div:first-child {
-  border-radius: 100px !important;
-  border: 1px solid #E5E6EA !important;                  /* always grey */
-  background: transparent !important;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) !important;  /* base shadow */
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
-}
-
-/* Hover / focus → only change shadow strength (border stays grey) */
-.vfrc-input-container:hover > div:first-child,
-.vfrc-input-container:focus-within > div:first-child {
-  border-color: #E5E6EA !important;                      /* still grey */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10) !important;  /* stronger shadow */
-}
-
