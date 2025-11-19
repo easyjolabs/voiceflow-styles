@@ -144,14 +144,11 @@
 }
 
 /* ============================================================
-   CHAT INPUT – GREEN HOVER BORDER ONLY
+   INPUT FIELD — CUSTOM FOCUS COLOR
    ============================================================ */
-
-/* Voiceflow’s input wrapper element usually contains classes like _1gdvh9t7 or _1gdvh9t9.
-   We target the visible border layer on hover. */
-
-.vfrc-input-container:hover > div:first-child,
-.vfrc-input-container:focus-within > div:first-child {
+.vfrc-input:focus,
+.vfrc-input:focus-visible {
+  outline: 2px solid #AAF8BA !important;
   border-color: #AAF8BA !important;
+  box-shadow: 0 0 0 3px rgba(170, 248, 186, 0.2) !important;
 }
-
