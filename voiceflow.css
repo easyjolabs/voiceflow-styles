@@ -247,3 +247,37 @@
   content: none !important;
 }
 
+/* ============================= */
+/* REMOVE LOADING BUBBLE BG      */
+/* ============================= */
+
+.vfrc-system-response--indicator,
+.vfrc-system-response--indicator *,
+.vfrc-system-response--indicator .vfrc-message {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* loading bubble pseudo-elements */
+.vfrc-system-response--indicator::before,
+.vfrc-system-response--indicator::after,
+.vfrc-system-response--indicator .vfrc-message::before,
+.vfrc-system-response--indicator .vfrc-message::after {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  content: none !important;
+}
+
+/* Voiceflow’s auto-generated wrapper for typing bubble */
+.vfrc-system-response--indicator [class*="gdvh"],
+.vfrc-system-response--indicator [class*="gdvh"]::before,
+.vfrc-system-response--indicator [class*="gdvh"]::after {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  content: none !important;
+}
+
+
