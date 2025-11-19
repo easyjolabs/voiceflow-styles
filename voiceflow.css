@@ -216,3 +216,34 @@
   box-shadow: none !important;
   outline: none !important;
 }
+
+/* ============================= */
+/*  REMOVE FOOTER GRADIENT/SHADOW */
+/* ============================= */
+
+/* main footer wrapper */
+.vfrc-footer__content,
+._1vj16245,
+._1gdvh9t0,
+.vfrc-footer__links,
+.vfrc-footer__content-scroll-to-bottom {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* kill pseudo-element gradients if they exist */
+.vfrc-footer__content::before,
+.vfrc-footer__content::after,
+._1vj16245::before,
+._1vj16245::after,
+._1gdvh9t0::before,
+._1gdvh9t0::after,
+.vfrc-footer__links::before,
+.vfrc-footer__links::after {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  content: none !important;
+}
+
