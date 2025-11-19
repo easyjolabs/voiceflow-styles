@@ -143,18 +143,12 @@
   box-shadow: none !important;
 }
 
-
 /* ============================================================
-   INPUT FIELD — REMOVE BLUE, ADD GREEN ONLY
+   RESTART MENU - REMOVE SHADOW/OVERLAY
    ============================================================ */
-const style = document.createElement('style');
-style.textContent = `
-  ._1gdvh9t7._1gdvh9t9 {
-    box-shadow: none !important;
-  }
-  ._1gdvh9t2:focus-within {
-    outline: 2px solid #AAF8BA !important;
-    border: 2px solid #AAF8BA !important;
-  }
-`;
-document.head.appendChild(style);
+.vfrc-prompt,
+._5x612k0 {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
