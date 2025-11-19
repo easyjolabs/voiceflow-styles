@@ -23,12 +23,20 @@
   padding: 0.5rem 0 !important;
 }
 
-/* USER MESSAGES */
-.vfrc-user-response .vfrc-message .vfrc-chat .vfrc-chat--dialog{
+/* Make the outer user container transparent */
+.vfrc-user-response {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Style the actual user message bubble (inner div) */
+.vfrc-user-response > div {
   background: #fafafa !important;
-  border-radius: 100px !important; /* pill shape */
+  border-radius: 100px !important;
   padding: 0.5rem 0.9rem !important;
   border: none !important;
+  box-shadow: none !important;
 }
 
 /* BUTTONS & CLICKABLE ELEMENTS FROM BOT */
@@ -36,7 +44,7 @@
 .vfrc-system-response .vfrc-button,
 .vfrc-carousel--button,
 .vfrc-chat-input--button {
-  background: #aaf8ba !important;
+  background: #fafafa  !important;
   border-radius: 100px !important; /* round pills */
   border: none !important;
   font-size: 1rem !important;
