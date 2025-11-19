@@ -23,20 +23,20 @@
   padding: 0.5rem 0 !important;
 }
 
-/* Make the outer user container transparent */
+/* USER MESSAGES */
 .vfrc-user-response {
   background: transparent !important;
   box-shadow: none !important;
   border: none !important;
 }
 
-/* Style the actual user message bubble (inner div) */
 .vfrc-user-response > div {
-  background: #fafafa !important;
+  background: #F2F2F2 !important;
   border-radius: 100px !important;
   padding: 0.5rem 0.9rem !important;
   border: none !important;
   box-shadow: none !important;
+  color: black !important; /* user text color */
 }
 
 /* BUTTONS & CLICKABLE ELEMENTS FROM BOT */
@@ -44,21 +44,23 @@
 .vfrc-system-response .vfrc-button,
 .vfrc-carousel--button,
 .vfrc-chat-input--button {
-  background: #fafafa  !important;
-  border-radius: 100px !important; /* round pills */
+  background: #F2F2F2 !important;
+  border-radius: 100px !important;
   border: none !important;
   font-size: 1rem !important;
   font-family: inherit !important;
   padding: 0.4rem 1rem !important;
   cursor: pointer;
+  color: black !important; /* button text color */
 }
 
-/* Optional: links inside bot messages */
+/* Bot links */
 .vfrc-system-response a {
-  background: #aaf8ba;
+  background: #F2F2F2;
   border-radius: 100px;
   padding: 0.2rem 0.6rem;
   text-decoration: none;
+  color: black !important; /* keep consistent */
 }
 
 /* INPUT FIELD / FOOTER */
@@ -70,7 +72,7 @@
   border-radius: 100px !important;
 }
 
-/* Remove extra card backgrounds to keep things clean/transparent */
+/* Remove extra card backgrounds */
 .vfrc-card--content,
 .vfrc-card--header,
 .vfrc-card--description,
