@@ -1,27 +1,26 @@
-/* ========== GLOBAL ========== */
+/* ============================================================
+   GLOBAL RESET — FONT + BACKGROUNDS
+   ============================================================ */
 
-/* Global background + base font */
-.voiceflow-chat,
-.vfrc-chat,
-.vfrc-chat--overlay {
-  background: transparent !important;
-}
-
-/* Force system font + 14px everywhere inside widget */
 .voiceflow-chat,
 .voiceflow-chat * {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif !important;
   font-size: 14px !important;
   line-height: 1.4 !important;
 }
 
-/* Specific overlay instance transparent */
+.voiceflow-chat,
+.vfrc-chat,
+.vfrc-chat--overlay,
 .vfrc-chat--overlay._5x612k3 {
   background: transparent !important;
 }
 
-/* ========== HEADER ========== */
+
+/* ============================================================
+   HEADER
+   ============================================================ */
 
 .vfrc-header {
   background: transparent !important;
@@ -29,14 +28,12 @@
   border-bottom: none !important;
 }
 
-/* ========== ASSISTANT / BOT MESSAGES ========== */
 
-.vfrc-system-response {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
+/* ============================================================
+   ASSISTANT / BOT MESSAGES
+   ============================================================ */
 
+.vfrc-system-response,
 .vfrc-system-response .vfrc-message {
   background: transparent !important;
   border: none !important;
@@ -44,7 +41,7 @@
   padding: 0.5rem 0 !important;
 }
 
-/* Typing / loading indicator – no bubble bg */
+/* Typing / loading indicator → fully transparent */
 .vfrc-system-response--indicator,
 .vfrc-system-response--indicator *,
 .vfrc-system-response--indicator .vfrc-message,
@@ -61,7 +58,10 @@
   content: none !important;
 }
 
-/* ========== USER MESSAGES ========== */
+
+/* ============================================================
+   USER MESSAGES
+   ============================================================ */
 
 .vfrc-user-response {
   background: transparent !important;
@@ -69,17 +69,19 @@
   box-shadow: none !important;
 }
 
-/* User bubble */
 .vfrc-user-response > div {
   background: #f2f2f2 !important;
   border-radius: 100px !important;
   padding: 0.5rem 0.9rem !important;
+  color: #000000 !important;
   border: none !important;
   box-shadow: none !important;
-  color: #000000 !important;
 }
 
-/* ========== BOT BUTTONS / CHIPS ========== */
+
+/* ============================================================
+   BOT BUTTONS / CHIPS
+   ============================================================ */
 
 .vfrc-button,
 .vfrc-system-response .vfrc-button,
@@ -87,12 +89,10 @@
   background: #f2f2f2 !important;
   border-radius: 100px !important;
   border: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
   padding: 0.4rem 1rem !important;
   cursor: pointer;
   color: #000000 !important;
-  margin: 2px 0 !important; /* spacing between chips */
+  margin: 2px 0 !important;
   transition: background 0.15s ease, transform 0.1s ease;
 }
 
@@ -109,18 +109,20 @@
   transform: translateY(0);
 }
 
-/* Links in bot messages as small pills */
+/* Links styled like chips */
 .vfrc-system-response a {
-  background: #f2f2f2;
-  border-radius: 100px;
-  padding: 0.2rem 0.6rem;
-  text-decoration: none;
+  background: #f2f2f2 !important;
+  border-radius: 100px !important;
+  padding: 0.2rem 0.6rem !important;
+  text-decoration: none !important;
   color: #000000 !important;
 }
 
-/* ========== FOOTER / INPUT ========== */
 
-/* No gradient/shadow under footer */
+/* ============================================================
+   FOOTER — REMOVE GRADIENT, SHADOW, FADE
+   ============================================================ */
+
 .vf-footer,
 .vfrc-footer--watermark,
 .vfrc-footer__content,
@@ -135,22 +137,37 @@
 ._1gdvh9t0::before,
 ._1gdvh9t0::after,
 .vfrc-footer__links::before,
-.vfrc-footer__links::after {
+.vfrc-footer__links::after,
+.vfrc-footer__content-scroll-to-bottom::before,
+.vfrc-footer__content-scroll-to-bottom::after,
+._1cosygz0,
+._1cosygz1,
+._1cosygz0::before,
+._1cosygz0::after,
+._1cosygz1::before,
+._1cosygz1::after {
   background: transparent !important;
+  background-image: none !important;
   box-shadow: none !important;
   border: none !important;
   content: none !important;
+  filter: none !important;
 }
 
-/* Input container (outer wrapper) – layout + height only */
+
+/* ============================================================
+   INPUT FIELD
+   ============================================================ */
+
+/* Wrapper (height, spacing only — NO border) */
 .vfrc-input-container {
   background: transparent !important;
+  padding: 0.7rem 1rem !important; /* +15% height */
+  min-height: 3.2rem !important;
+  border-radius: 100px !important;
   border: none !important;
   box-shadow: none !important;
   outline: none !important;
-  padding: 0.7rem 1rem !important;      /* ~15% taller */
-  min-height: 3.2rem !important;
-  border-radius: 100px !important;
   display: flex;
   align-items: center;
 }
@@ -162,7 +179,7 @@
   outline: none !important;
 }
 
-/* Inner border element – single visible black border */
+/* Inner black border element (the visible one) */
 ._1gdvh9t7,
 ._1gdvh9t9 {
   border-radius: 100px !important;
@@ -180,38 +197,37 @@
   outline: none !important;
 }
 
-/* Textarea */
+/* Textarea itself */
 .vfrc-chat-input {
   background: transparent !important;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
   color: #000000 !important;
   resize: none !important;
 }
 
-/* ========== SEND BUTTON ========== */
+
+/* ============================================================
+   SEND BUTTON
+   ============================================================ */
 
 .vfrc-chat-input__send,
 .vfrc-chat-input--button {
   background: #000000 !important;
   border-radius: 50% !important;
   border: 1px solid #000000 !important;
-  box-shadow: none !important;
   width: 36px !important;
   height: 36px !important;
   min-width: 36px !important;
   min-height: 36px !important;
   display: flex !important;
-  align-items: center !important;
   justify-content: center !important;
-  cursor: pointer;
+  align-items: center !important;
+  box-shadow: none !important;
   padding: 0 !important;
 }
 
-/* Arrow icon in send button */
 .vfrc-chat-input__send-icon,
 .vfrc-chat-input__send .vfrc-icon,
 .vfrc-chat-input--button .vfrc-icon,
@@ -224,7 +240,10 @@
   stroke: #ffffff !important;
 }
 
-/* ========== CARDS / IMAGES ========== */
+
+/* ============================================================
+   CARDS / IMAGES
+   ============================================================ */
 
 .vfrc-card--content,
 .vfrc-card--header,
