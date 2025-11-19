@@ -182,3 +182,37 @@
   border: none !important;
   box-shadow: none !important;
 }
+
+/* Remove border from outer container (just used for focus handling) */
+.vfrc-input-container {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Keep container from adding blue on focus */
+.vfrc-input-container:focus,
+.vfrc-input-container:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Inner border element (this was blue) -> make it the ONLY border, in black */
+._1gdvh9t7,
+._1gdvh9t9 {
+  border-radius: 100px !important;
+  border: 1px solid #000000 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* On focus, keep it black (no blue glow) */
+._1gdvh9t7:focus,
+._1gdvh9t7:focus-within,
+._1gdvh9t9:focus,
+._1gdvh9t9:focus-within {
+  border-color: #000000 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
