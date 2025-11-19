@@ -156,48 +156,42 @@
 
 
 /* ============================================================
-   INPUT FIELD
+   INPUT FIELD — UPDATED (border + shadow + hover)
    ============================================================ */
 
-/* Wrapper (height, spacing only — NO border) */
+/* Outer wrapper (height + padding only) */
 .vfrc-input-container {
   background: transparent !important;
-  padding: 0.7rem 1rem !important; /* +15% height */
+  padding: 0.7rem 1rem !important;
   min-height: 3.2rem !important;
   border-radius: 100px !important;
-  border: none !important;
-  box-shadow: none !important;
+  border: none !important;      /* no border here */
   outline: none !important;
   display: flex;
   align-items: center;
-}
-
-.vfrc-input-container:focus,
-.vfrc-input-container:focus-within {
-  border: none !important;
   box-shadow: none !important;
-  outline: none !important;
 }
 
-/* Inner black border element (the visible one) */
+/* Visible border element */
 ._1gdvh9t7,
 ._1gdvh9t9 {
   border-radius: 100px !important;
-  border: 1px solid #000000 !important;
+  border: 1px solid #E5E6EA !important;      /* NEW border */
   background: transparent !important;
-  box-shadow: none !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) !important;  /* light shadow */
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
-._1gdvh9t7:focus,
-._1gdvh9t7:focus-within,
-._1gdvh9t9:focus,
-._1gdvh9t9:focus-within {
-  border-color: #000000 !important;
-  box-shadow: none !important;
-  outline: none !important;
+/* Hover / focus → slightly stronger shadow */
+.vfrc-input-container:hover ._1gdvh9t7,
+.vfrc-input-container:hover ._1gdvh9t9,
+.vfrc-input-container:focus-within ._1gdvh9t7,
+.vfrc-input-container:focus-within ._1gdvh9t9 {
+  border-color: #E5E6EA !important;   /* keep border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10) !important;
 }
 
-/* Textarea itself */
+/* Textarea */
 .vfrc-chat-input {
   background: transparent !important;
   border: none !important;
@@ -206,6 +200,9 @@
   color: #000000 !important;
   resize: none !important;
 }
+
+
+
 
 
 /* ============================================================
