@@ -2,7 +2,7 @@
 .voiceflow-chat,
 .vfrc-chat--overlay,
 .vfrc-chat {
-  background: transparent !important;
+  background: #ffffff !important;
   font-size: 1rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
@@ -24,7 +24,7 @@
 }
 
 /* USER MESSAGES */
-.vfrc-user-response .vfrc-message {
+.vfrc-user-response .vfrc-message .vfrc-chat .vfrc-chat--dialog{
   background: #fafafa !important;
   border-radius: 100px !important; /* pill shape */
   padding: 0.5rem 0.9rem !important;
