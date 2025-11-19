@@ -172,3 +172,35 @@
   padding: 20px !important;
   border-radius: 12px !important;
 }
+
+
+/* ============================================================
+   REMOVE LOADER / TYPING INDICATOR BACKGROUND COMPLETELY
+   ============================================================ */
+
+.vfrc-system-response--indicator,
+.vfrc-system-response--indicator *,
+.vfrc-system-response--indicator::before,
+.vfrc-system-response--indicator::after {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Remove the bubble wrapper around the three dots */
+.vfrc-system-response--indicator .vfrc-message,
+.vfrc-system-response--indicator .vfrc-message *,
+.vfrc-system-response--indicator [class*="message"],
+.vfrc-system-response--indicator [class*="bubble"] {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure the dot elements themselves have no grey background */
+.vfrc-system-response--indicator span,
+.vfrc-system-response--indicator span::before,
+.vfrc-system-response--indicator span::after {
+  background: transparent !important;
+}
+
