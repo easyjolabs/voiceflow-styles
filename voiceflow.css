@@ -1,0 +1,17 @@
+/* Font size override */
+.vfrc-message,
+.vfrc-message p,
+.vfrc-user-response,
+.vfrc-chat-input,
+.vfrc-button {
+  font-size: 1.1rem !important;
+  line-height: 1.45 !important;
+}
+
+/* Custom form elements */
+.vf-card,
+.vf-card .vf-input,
+.vf-card .vf-label,
+.vf-card .vf-error {
+  font-size: 1.1rem !important;
+}
