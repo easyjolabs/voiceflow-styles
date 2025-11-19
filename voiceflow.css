@@ -105,3 +105,56 @@
   background: transparent !important;
   font-size
 
+
+
+  /* FOOTER: no background or shadow */
+.vf-footer {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-top: none !important;
+}
+
+/* INPUT: ~15% taller (more padding & min-height) */
+.vfrc-input {
+  background: transparent !important;
+  border-radius: 100px !important;
+  border: 1px solid #000000 !important; /* keeps border black */
+  padding: 0.9rem 1rem !important;      /* more vertical padding */
+  min-height: 3.1rem !important;        /* extra height */
+  display: flex;
+  align-items: center;
+  outline: none !important;
+}
+
+/* SEND BUTTON: black circle */
+.vfrc-chat-input--button {
+  background: #000000 !important;
+  border-radius: 50% !important;
+  border: 1px solid #000000 !important;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+/* keep arrow white inside send button */
+.vfrc-chat-input--button .vfrc-icon,
+.vfrc-chat-input--button svg,
+.vfrc-chat-input--button path {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* TYPING / LOADING INDICATOR: no background */
+.vfrc-system-response--indicator {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.vfrc-system-response--indicator .vfrc-message {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+
