@@ -159,7 +159,7 @@
   padding: 0.7rem 1rem !important; /* ~15% taller */
   min-height: 3.2rem !important;
   border-radius: 100px !important;
-  border: none !important;      /* no border here */
+  border: none !important; /* no border here */
   box-shadow: none !important;
   outline: none !important;
   display: flex;
@@ -223,7 +223,7 @@
   padding: 0 !important;
 }
 
-/* Arrow icon (can be scaled slightly smaller if you like) */
+/* Arrow icon (slightly smaller visually) */
 .vfrc-chat-input__send-icon,
 .vfrc-chat-input__send .vfrc-icon,
 .vfrc-chat-input--button .vfrc-icon,
@@ -232,7 +232,6 @@
   color: #ffffff !important;
   fill: #ffffff !important;
   stroke: #ffffff !important;
-  /* Optional size tweak – visually smaller, but not truly thinner stroke */
   transform: scale(0.85) !important;
   transform-origin: center center !important;
 }
@@ -248,7 +247,7 @@
    SCROLL-DOWN / RESTART BUTTON
    ============================================================ */
 
-/* Button circle with grey background */
+/* Scroll-down button circle with grey background */
 .vfrc-footer__content-scroll-to-bottom-button,
 ._1cosygz0,
 ._1cosygz1 {
@@ -265,7 +264,7 @@
   border: none !important;
 }
 
-/* Icon inside scroll/restart button → black */
+/* Icon inside scroll button → black */
 .vfrc-footer__content-scroll-to-bottom-button svg,
 .vfrc-footer__content-scroll-to-bottom-button path,
 ._1cosygz0 svg,
@@ -284,6 +283,50 @@
   background: #E6E6E6 !important;
 }
 
+
+/* ============================================================
+   MOVE RESTART BUTTON NEXT TO SEND
+   ============================================================ */
+
+/* Style + reposition the built-in restart button from header down near the input.
+   We target common patterns: title/aria-label "Restart" and classes containing 'restart'. */
+
+.vfrc-header button[title="Restart"],
+.vfrc-header button[aria-label="Restart"],
+.vfrc-header .vfrc-restart-button,
+.vfrc-header [class*="restart"] {
+  position: fixed !important;          /* detach from header and pin near footer */
+  right: 72px !important;              /* slightly left of send button */
+  bottom: 32px !important;             /* align vertically with input bar */
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  border-radius: 50% !important;
+  background: #F2F2F2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  z-index: 9999 !important;
+}
+
+/* Restart icon itself → black thin line */
+.vfrc-header button[title="Restart"] svg,
+.vfrc-header button[title="Restart"] path,
+.vfrc-header button[aria-label="Restart"] svg,
+.vfrc-header button[aria-label="Restart"] path,
+.vfrc-header .vfrc-restart-button svg,
+.vfrc-header .vfrc-restart-button path,
+.vfrc-header [class*="restart"] svg,
+.vfrc-header [class*="restart"] path {
+  color: #000000 !important;
+  fill: none !important;
+  stroke: #000000 !important;
+  stroke-width: 1.5 !important;
+}
 
 /* ============================================================
    CARDS / IMAGES
