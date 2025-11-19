@@ -1,7 +1,6 @@
 /* ============================================================
    GLOBAL RESET — FONT + BACKGROUNDS
    ============================================================ */
-
 .voiceflow-chat,
 .voiceflow-chat * {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -17,44 +16,36 @@
   background: transparent !important;
 }
 
-
 /* ============================================================
    HEADER
    ============================================================ */
-
 .vfrc-header {
   background: transparent !important;
   box-shadow: none !important;
   border-bottom: none !important;
 }
 
+/* Hide restart button (using nav button instead) */
+.vfrc-header--button,
+.jyiueib {
+  display: none !important;
+}
 
 /* ============================================================
-   ASSISTANT / BOT MESSAGES
+   MESSAGES
    ============================================================ */
-
+/* Assistant/Bot messages */
 .vfrc-system-response,
-.vfrc-system-response .vfrc-message {
+.vfrc-system-response .vfrc-message,
+.vfrc-system-response--indicator,
+.vfrc-system-response--indicator * {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   padding: 0.5rem 0 !important;
 }
 
-/* Typing indicator transparent */
-.vfrc-system-response--indicator,
-.vfrc-system-response--indicator *,
-.vfrc-system-response--indicator .vfrc-message {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-
-/* ============================================================
-   USER MESSAGES
-   ============================================================ */
-
+/* User messages */
 .vfrc-user-response {
   background: transparent !important;
   border: none !important;
@@ -70,11 +61,9 @@
   box-shadow: none !important;
 }
 
-
 /* ============================================================
-   BOT BUTTONS / CHIPS
+   BUTTONS & LINKS
    ============================================================ */
-
 .vfrc-button,
 .vfrc-system-response .vfrc-button,
 .vfrc-carousel--button {
@@ -110,11 +99,9 @@
   color: #000000 !important;
 }
 
-
 /* ============================================================
-   FOOTER — REMOVE ALL SHADOWS / GRADIENTS
+   FOOTER
    ============================================================ */
-
 .vf-footer,
 .vfrc-footer--watermark,
 .vfrc-footer__content,
@@ -128,11 +115,9 @@
   border: none !important;
 }
 
-
 /* ============================================================
-   CARDS / IMAGES (keep clean)
+   CARDS & IMAGES
    ============================================================ */
-
 .vfrc-card--content,
 .vfrc-card--header,
 .vfrc-card--description,
@@ -144,19 +129,11 @@
 }
 
 /* ============================================================
-   RESTART MENU - REMOVE SHADOW/OVERLAY
+   RESTART MENU
    ============================================================ */
 .vfrc-prompt,
 ._5x612k0 {
   background: transparent !important;
   backdrop-filter: none !important;
   box-shadow: none !important;
-}
-
-/* ============================================================
-   RESTART BUTTON - HIDE
-   ============================================================ */
-.vfrc-header--button,
-.jyiueib {
-  display: none !important;
 }
