@@ -152,3 +152,11 @@
   backdrop-filter: none !important;
   box-shadow: none !important;
 }
+
+/* ============================================================
+   RESTART BUTTON - HIDE
+   ============================================================ */
+.vfrc-header--button,
+.jyiueib {
+  display: none !important;
+}
