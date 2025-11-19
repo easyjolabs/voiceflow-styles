@@ -137,3 +137,30 @@
   backdrop-filter: none !important;
   box-shadow: none !important;
 }
+
+/* ============================================================
+   USER MESSAGES WITH EMOJI INSIDE
+   ============================================================ */
+.vfrc-user-response {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.vfrc-user-response > div {
+  background: #f2f2f2 !important;
+  border-radius: 100px !important;
+  padding: 0.5rem 0.9rem !important;
+  color: #000000 !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.vfrc-user-response > div::before {
+  content: "👤" !important;
+  font-size: 16px !important;
+  flex-shrink: 0 !important;
+}
