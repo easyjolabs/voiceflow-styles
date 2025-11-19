@@ -284,6 +284,7 @@
 }
 
 
+
 /* ============================================================
    MOVE RESTART BUTTON NEXT TO SEND
    ============================================================ */
@@ -341,3 +342,22 @@
   border: none !important;
   box-shadow: none !important;
 }
+
+/* ===== FINAL FIX: input border always grey ===== */
+
+/* This inner div is always the visible border layer */
+.vfrc-input-container > div:first-child {
+  border-radius: 100px !important;
+  border: 1px solid #E5E6EA !important;                  /* always grey */
+  background: transparent !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) !important;  /* base shadow */
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+/* Hover / focus → only change shadow strength (border stays grey) */
+.vfrc-input-container:hover > div:first-child,
+.vfrc-input-container:focus-within > div:first-child {
+  border-color: #E5E6EA !important;                      /* still grey */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10) !important;  /* stronger shadow */
+}
+
