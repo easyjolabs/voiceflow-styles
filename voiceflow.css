@@ -1,5 +1,74 @@
+/* GLOBAL WIDGET STYLES */
+.voiceflow-chat,
+.vfrc-chat--overlay,
+.vfrc-chat {
+  background: transparent !important;
+  font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* HEADER */
 .vfrc-header {
-  background: #ffffff !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+}
+
+/* ASSISTANT (BOT) MESSAGES */
+.vfrc-system-response .vfrc-message {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.5rem 0 !important;
+}
+
+/* USER MESSAGES */
+.vfrc-user-response .vfrc-message {
+  background: #fafafa !important;
+  border-radius: 100px !important; /* pill shape */
+  padding: 0.5rem 0.9rem !important;
+  border: none !important;
+}
+
+/* BUTTONS & CLICKABLE ELEMENTS FROM BOT */
+.vfrc-button,
+.vfrc-system-response .vfrc-button,
+.vfrc-carousel--button,
+.vfrc-chat-input--button {
+  background: #aaf8ba !important;
+  border-radius: 100px !important; /* round pills */
+  border: none !important;
+  font-size: 1rem !important;
+  font-family: inherit !important;
+  padding: 0.4rem 1rem !important;
+  cursor: pointer;
+}
+
+/* Optional: links inside bot messages */
+.vfrc-system-response a {
+  background: #aaf8ba;
+  border-radius: 100px;
+  padding: 0.2rem 0.6rem;
+  text-decoration: none;
+}
+
+/* INPUT FIELD / FOOTER */
+.vf-footer,
+.vfrc-input {
+  background: transparent !important;
+  font-size: 1rem !important;
+  font-family: inherit !important;
+  border-radius: 100px !important;
+}
+
+/* Remove extra card backgrounds to keep things clean/transparent */
+.vfrc-card--content,
+.vfrc-card--header,
+.vfrc-card--description,
+.vfrc-image--background,
+.vfrc-carousel {
+  background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 }
