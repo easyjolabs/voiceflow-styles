@@ -31,12 +31,12 @@
 }
 
 .vfrc-user-response > div {
-  background: #F2F2F2 !important;
+  background: #f2f2f2 !important;
   border-radius: 100px !important;
   padding: 0.5rem 0.9rem !important;
   border: none !important;
   box-shadow: none !important;
-  color: black !important; /* user text color */
+  color: black !important;
 }
 
 /* BUTTONS & CLICKABLE ELEMENTS FROM BOT */
@@ -44,32 +44,72 @@
 .vfrc-system-response .vfrc-button,
 .vfrc-carousel--button,
 .vfrc-chat-input--button {
-  background: #F2F2F2 !important;
+  background: #f2f2f2 !important;
   border-radius: 100px !important;
   border: none !important;
-  font-size: 1rem !important;
+  font-size: 0.95rem !important; /* slightly smaller to match text */
   font-family: inherit !important;
   padding: 0.4rem 1rem !important;
   cursor: pointer;
-  color: black !important; /* button text color */
+  color: black !important;
+  transition: background 0.15s ease, transform 0.1s ease;
 }
 
-/* Bot links */
+/* BUTTON HOVER + ACTIVE STATES */
+.vfrc-button:hover,
+.vfrc-system-response .vfrc-button:hover,
+.vfrc-carousel--button:hover,
+.vfrc-chat-input--button:hover {
+  background: #e3e3e3 !important;
+  transform: translateY(-1px);
+}
+
+.vfrc-button:active,
+.vfrc-system-response .vfrc-button:active,
+.vfrc-carousel--button:active,
+.vfrc-chat-input--button:active {
+  transform: translateY(0);
+}
+
+/* Bot links styled like chips */
 .vfrc-system-response a {
-  background: #F2F2F2;
+  background: #f2f2f2;
   border-radius: 100px;
   padding: 0.2rem 0.6rem;
   text-decoration: none;
-  color: black !important; /* keep consistent */
+  color: black !important;
 }
 
 /* INPUT FIELD / FOOTER */
-.vf-footer,
+.vf-footer {
+  background: transparent !important;
+}
+
+/* Input wrapper */
 .vfrc-input {
   background: transparent !important;
   font-size: 1rem !important;
   font-family: inherit !important;
   border-radius: 100px !important;
+  border: 1px solid #dcdcdc !important;
+  padding: 0.7rem 1rem !important; /* slightly more padding = more height */
+  min-height: 3rem !important;      /* ~15% taller than default */
+  display: flex;
+  align-items: center;
+}
+
+/* Active/focus state: black border */
+.vfrc-input:focus-within {
+  border-color: #000000 !important;
+  box-shadow: none !important;
+}
+
+/* Ensure text inside input is consistent */
+.vfrc-input input,
+.vfrc-input textarea {
+  font-size: 1rem !important;
+  font-family: inherit !important;
+  color: black !important;
 }
 
 /* Remove extra card backgrounds */
