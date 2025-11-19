@@ -142,3 +142,16 @@
   border: none !important;
   box-shadow: none !important;
 }
+
+/* ============================================================
+   CHAT INPUT – GREEN HOVER BORDER ONLY
+   ============================================================ */
+
+/* Voiceflow’s input wrapper element usually contains classes like _1gdvh9t7 or _1gdvh9t9.
+   We target the visible border layer on hover. */
+
+.vfrc-input-container:hover > div:first-child,
+.vfrc-input-container:focus-within > div:first-child {
+  border-color: #AAF8BA !important;
+}
+
