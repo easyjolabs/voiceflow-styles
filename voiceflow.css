@@ -164,3 +164,11 @@
   font-size: 16px !important;
   flex-shrink: 0 !important;
 }
+
+.vfrc-prompt,
+._5x612k0 {
+  background: #ffffff !important; /* Solid white */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important; /* Optional subtle shadow */
+  padding: 20px !important;
+  border-radius: 12px !important;
+}
