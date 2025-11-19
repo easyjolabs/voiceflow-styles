@@ -139,13 +139,7 @@
 .vfrc-footer__links::before,
 .vfrc-footer__links::after,
 .vfrc-footer__content-scroll-to-bottom::before,
-.vfrc-footer__content-scroll-to-bottom::after,
-._1cosygz0,
-._1cosygz1,
-._1cosygz0::before,
-._1cosygz0::after,
-._1cosygz1::before,
-._1cosygz1::after {
+.vfrc-footer__content-scroll-to-bottom::after {
   background: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
@@ -156,42 +150,49 @@
 
 
 /* ============================================================
-   INPUT FIELD — UPDATED (border + shadow + hover)
+   INPUT FIELD — GREY OUTLINE + SHADOW
    ============================================================ */
 
-/* Outer wrapper (height + padding only) */
+/* Outer wrapper (height + spacing only) */
 .vfrc-input-container {
   background: transparent !important;
-  padding: 0.7rem 1rem !important;
+  padding: 0.7rem 1rem !important; /* ~15% taller */
   min-height: 3.2rem !important;
   border-radius: 100px !important;
   border: none !important;      /* no border here */
+  box-shadow: none !important;
   outline: none !important;
   display: flex;
   align-items: center;
-  box-shadow: none !important;
 }
 
-/* Visible border element */
+.vfrc-input-container:focus,
+.vfrc-input-container:focus-within {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Inner element – visible grey outline + base shadow (even inactive) */
 ._1gdvh9t7,
 ._1gdvh9t9 {
   border-radius: 100px !important;
-  border: 1px solid #E5E6EA !important;      /* NEW border */
+  border: 1px solid #E5E6EA !important;                       /* grey outline */
   background: transparent !important;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) !important;  /* light shadow */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) !important;       /* base shadow */
   transition: box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
-/* Hover / focus → slightly stronger shadow */
+/* Hover / active → slightly more shadow */
 .vfrc-input-container:hover ._1gdvh9t7,
 .vfrc-input-container:hover ._1gdvh9t9,
 .vfrc-input-container:focus-within ._1gdvh9t7,
 .vfrc-input-container:focus-within ._1gdvh9t9 {
-  border-color: #E5E6EA !important;   /* keep border */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10) !important;
+  border-color: #E5E6EA !important;                           /* stay grey */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10) !important;       /* stronger shadow */
 }
 
-/* Textarea */
+/* Textarea itself */
 .vfrc-chat-input {
   background: transparent !important;
   border: none !important;
@@ -200,9 +201,6 @@
   color: #000000 !important;
   resize: none !important;
 }
-
-
-
 
 
 /* ============================================================
@@ -225,7 +223,7 @@
   padding: 0 !important;
 }
 
-/* Arrow icon – thinner / smaller inside the circle */
+/* Arrow icon (can be scaled slightly smaller if you like) */
 .vfrc-chat-input__send-icon,
 .vfrc-chat-input__send .vfrc-icon,
 .vfrc-chat-input--button .vfrc-icon,
@@ -234,17 +232,57 @@
   color: #ffffff !important;
   fill: #ffffff !important;
   stroke: #ffffff !important;
-  transform: scale(0.6) !important;          /* tweak this: 0.85 / 0.75 etc. */
+  /* Optional size tweak – visually smaller, but not truly thinner stroke */
+  transform: scale(0.85) !important;
   transform-origin: center center !important;
 }
 
-/* Path stays white */
 .vfrc-chat-input__send path,
 .vfrc-chat-input--button path {
   fill: #ffffff !important;
   stroke: #ffffff !important;
 }
 
+
+/* ============================================================
+   SCROLL-DOWN / RESTART BUTTON
+   ============================================================ */
+
+/* Button circle with grey background */
+.vfrc-footer__content-scroll-to-bottom-button,
+._1cosygz0,
+._1cosygz1 {
+  background: #F2F2F2 !important;
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Icon inside scroll/restart button → black */
+.vfrc-footer__content-scroll-to-bottom-button svg,
+.vfrc-footer__content-scroll-to-bottom-button path,
+._1cosygz0 svg,
+._1cosygz0 path,
+._1cosygz1 svg,
+._1cosygz1 path {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* Optional hover effect */
+.vfrc-footer__content-scroll-to-bottom-button:hover,
+._1cosygz0:hover,
+._1cosygz1:hover {
+  background: #E6E6E6 !important;
+}
 
 
 /* ============================================================
