@@ -182,9 +182,8 @@
   padding-bottom: 1.2rem !important;
   min-height: 4.5rem !important;    /* previously ~3rem → +50% */
 }
-
 /* ============================================================
-   FIX: TEXTFELD UND SEND-BUTTON OBEN AUSRICHTEN
+   FIX: TEXTFELD UND SEND-BUTTON OBEN AUSRICHTEN (REVISED)
    ============================================================ */
 
 /* 1. Setzt den Container (Wrapper) auf Flexbox und richtet Elemente oben aus */
@@ -192,16 +191,18 @@
   display: flex !important;
   /* KEY: Richtet die Kindelemente (Textfeld und Button) am oberen Rand aus */
   align-items: flex-start !important; 
-  /* Stellt sicher, dass genügend Platz zwischen den Elementen ist */
-  justify-content: space-between !important; 
+  /* Fügt etwas Innenabstand hinzu, um den Raum oben zu schaffen */
+  padding-top: 0.5rem !important;
 }
 
-/* 2. Fixiert das Eingabefeld selbst auf obere Ausrichtung */
+/* 2. Fixiert das Eingabefeld selbst auf obere Ausrichtung und stellt sicher, dass es Platz hat */
 .vfrc-input-text {
-  /* Setzt die vertikale Ausrichtung der Textzeile auf den oberen Rand */
+  /* Erlaubt dem Element, den verfügbaren Platz im Flex-Container optimal zu füllen */
+  flex-grow: 1;
+  /* Stellt sicher, dass die vertikale Ausrichtung des Textes oben beginnt */
   vertical-align: top !important; 
-  /* Stellt sicher, dass das Feld die gesamte Höhe nutzt, um Platz für die obere Ausrichtung zu schaffen */
-  height: 100% !important; 
+  /* Setzt eine Mindesthöhe, falls die Textarea leer ist, und sorgt für vertikalen Platz */
+  min-height: 2.5rem !important; 
 }
 
 /* 3. Zwingt den Sende-Button, sich ebenfalls am oberen Rand zu positionieren */
@@ -210,8 +211,9 @@
   align-self: flex-start !important; 
 }
 
-/* 4. Anpassung für den Text innerhalb der Textarea, falls diese zentriert ist */
-/* Dies ist oft das am tiefsten verschachtelte Element, das den Text enthält */
+/* 4. Sicherstellen, dass die Textarea im Input-Feld korrekt ausgerichtet ist */
 .vfrc-input-text textarea {
   vertical-align: top !important;
+  /* Erlaubt der Textarea, die gesamte Höhe im Input-Container einzunehmen */
+  height: 100% !important;
 }
