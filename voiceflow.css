@@ -175,10 +175,22 @@
 
 
 /* ============================================================
-   FIX: LOADER / TYPING INDICATOR DOTS BACKGROUND
+   FIX: LADEELEMENTE VOLLSTÄNDIG TRANSPARENT
    ============================================================ */
 
-/* Target the container around the dots */
+/* 1. Entfernt den Hintergrund der äußeren Blase/des Containers */
+.vfrc-system-response--indicator,
+.vfrc-system-response--indicator::before,
+.vfrc-system-response--indicator::after,
+.vfrc-system-response--indicator * {
+  /* Setzt alle Hintergründe auf transparent */
+  background: transparent !important;
+  /* Stellt sicher, dass keine Boxen oder Ränder stören */
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* 2. Entfernt speziell den Hintergrund der inneren Sprechblase */
 .vfrc-system-response--indicator .vfrc-message,
 .vfrc-system-response--indicator [class*="bubble"] {
   background: transparent !important;
@@ -186,13 +198,23 @@
   box-shadow: none !important;
 }
 
-/* Target the three dots/circles specifically */
-.vfrc-system-response--indicator .vfrc-message > div,
-.vfrc-system-response--indicator .vfrc-message span {
-  /* This is the key part: setting the individual dot color to transparent */
-  background-color: transparent !important; 
-  /* Also ensure any border/box-shadow isn't adding a visible element */
+/* 3. Zielt auf die animierten Punkte/Kreise selbst ab (Häufigste Fehlerquelle) */
+/* Verwendet eine stärkere Spezifität, um sicherzustellen, dass die Farbe überschrieben wird */
+.vfrc-system-response--indicator span,
+.vfrc-system-response--indicator span::before,
+.vfrc-system-response--indicator span::after,
+.vfrc-system-response--indicator div[class*="dot"] {
+  /* Setzt die tatsächliche Füllfarbe der Punkte auf transparent */
+  background-color: transparent !important;
+  /* Oder falls die Farbe über 'color' gesetzt wird, versuchen Sie: */
+  color: transparent !important;
+  /* Fügt sicherheitshalber auch hier Ränder und Schatten hinzu */
   border: none !important;
   box-shadow: none !important;
+}
+
+/* Optional: falls die Animation selbst noch einen Farbwert setzt */
+.vfrc-system-response--indicator i {
+    color: transparent !important;
 }
 
