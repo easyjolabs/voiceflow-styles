@@ -138,14 +138,14 @@
   box-shadow: none !important;
 }
 /* ============================================================
-   TYPING INDICATOR - NO BACKGROUND, BOTTOM ALIGNED
+   TYPING INDICATOR - BIGGER DOTS
    ============================================================ */
 /* Remove all backgrounds */
 .vfrc-typing-indicator--container-inner,
 ._1ayyscc1 {
   background: transparent !important;
   display: flex !important;
-  align-items: flex-end !important; /* Align to bottom */
+  align-items: flex-end !important;
 }
 
 .vfrc-typing-indicator,
@@ -154,12 +154,16 @@
   align-self: flex-end !important;
 }
 
-/* Dots color */
+/* Bigger dots */
 .xaffbq2 {
   background: #E5E6EA !important;
+  width: 10px !important; /* Default is usually 6-8px */
+  height: 10px !important;
+  min-width: 10px !important;
+  min-height: 10px !important;
 }
 
-/* Also align the system response container */
+/* System response alignment */
 .vfrc-system-response--indicator {
   display: flex !important;
   align-items: flex-end !important;
