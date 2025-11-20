@@ -138,18 +138,22 @@
   box-shadow: none !important;
 }
 /* ============================================================
-   TYPING INDICATOR - REMOVE BACKGROUND
+   TYPING INDICATOR - DOTS COLOR E5E6EA
    ============================================================ */
+/* Remove background */
 .vfrc-typing-indicator--container-inner,
 ._1ayyscc1 {
   background: transparent !important;
-  background-color: transparent !important;
 }
 
 .vfrc-typing-indicator,
 .xaffbq1 {
   background: transparent !important;
-  background-color: transparent !important;
+}
+
+/* Dots color = E5E6EA */
+.xaffbq2 {
+  background: #E5E6EA !important;
 }
 
 /* The dots themselves */
