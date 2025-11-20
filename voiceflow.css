@@ -139,8 +139,10 @@
 }
 
 /* ============================================================
-   USER MESSAGES WITH EMOJI INSIDE
+   USER MESSAGES WITH MATERIAL ICON
    ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=contacts_product');
+
 .vfrc-user-response {
   background: transparent !important;
   border: none !important;
@@ -160,17 +162,15 @@
 }
 
 .vfrc-user-response > div::before {
-  content: "👤" !important;
-  font-size: 16px !important;
+  content: "contacts_product" !important;
+  font-family: 'Material Symbols Outlined' !important;
+  font-size: 20px !important;
   flex-shrink: 0 !important;
-}
-
-.vfrc-prompt,
-._5x612k0 {
-  background: #ffffff !important; /* Solid white */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important; /* Optional subtle shadow */
-  padding: 20px !important;
-  border-radius: 12px !important;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24 !important;
 }
 
 /* ============================================================
