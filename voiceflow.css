@@ -138,32 +138,24 @@
   box-shadow: none !important;
 }
 /* ============================================================
-   USER MESSAGES WITH CUSTOM ICON
+   TYPING INDICATOR - REMOVE BACKGROUND
    ============================================================ */
-.vfrc-user-response {
+.vfrc-typing-indicator--container-inner,
+._1ayyscc1 {
   background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+  background-color: transparent !important;
 }
 
-.vfrc-user-response > div {
-  background: #f2f2f2 !important;
-  border-radius: 100px !important;
-  padding: 0.5rem 0.9rem !important;
-  color: #000000 !important;
-  border: none !important;
-  box-shadow: none !important;
-  display: flex !important;
-  align-items: left !important;
-  gap: 8px !important;
+.vfrc-typing-indicator,
+.xaffbq1 {
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
-.vfrc-user-response > div::before {
-  content: "◉" !important;
-  font-size: 16px !important;
-  flex-shrink: 0 !important;
+/* The dots themselves */
+.xaffbq2 {
+  background: #000000 !important; /* Dot color - change if needed */
 }
-
 /* ============================================================
    CHAT INPUT — INCREASE HEIGHT BY 50%
    ============================================================ */
