@@ -138,27 +138,31 @@
   box-shadow: none !important;
 }
 /* ============================================================
-   TYPING INDICATOR - DOTS COLOR E5E6EA
+   TYPING INDICATOR - NO BACKGROUND, BOTTOM ALIGNED
    ============================================================ */
-/* Remove background */
+/* Remove all backgrounds */
 .vfrc-typing-indicator--container-inner,
 ._1ayyscc1 {
   background: transparent !important;
+  display: flex !important;
+  align-items: flex-end !important; /* Align to bottom */
 }
 
 .vfrc-typing-indicator,
 .xaffbq1 {
   background: transparent !important;
+  align-self: flex-end !important;
 }
 
-/* Dots color = E5E6EA */
+/* Dots color */
 .xaffbq2 {
   background: #E5E6EA !important;
 }
 
-/* The dots themselves */
-.xaffbq2 {
-  background: #000000 !important; /* Dot color - change if needed */
+/* Also align the system response container */
+.vfrc-system-response--indicator {
+  display: flex !important;
+  align-items: flex-end !important;
 }
 /* ============================================================
    CHAT INPUT — INCREASE HEIGHT BY 50%
