@@ -154,7 +154,7 @@
   border: none !important;
   box-shadow: none !important;
   display: flex !important;
-  align-items: center !important;
+  align-items: left !important;
   gap: 8px !important;
 }
 
@@ -175,11 +175,14 @@
 }
 
 /* ============================================================
-   TYPING INDICATOR - REMOVE BACKGROUND
+   TYPING INDICATOR - FORCE TRANSPARENT BACKGROUND
    ============================================================ */
 .vfrc-system-response--indicator,
+.vfrc-system-response--indicator > *,
 .vfrc-system-response--indicator .vfrc-message,
-.vfrc-system-response--indicator * {
+.vfrc-system-response--indicator div,
+.vfrc-system-response--indicator span {
   background: transparent !important;
   background-color: transparent !important;
+  background-image: none !important;
 }
