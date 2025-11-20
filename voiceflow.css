@@ -175,32 +175,24 @@
 
 
 /* ============================================================
-   REMOVE LOADER / TYPING INDICATOR BACKGROUND COMPLETELY
+   FIX: LOADER / TYPING INDICATOR DOTS BACKGROUND
    ============================================================ */
 
-.vfrc-system-response--indicator,
-.vfrc-system-response--indicator *,
-.vfrc-system-response--indicator::before,
-.vfrc-system-response--indicator::after {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-/* Remove the bubble wrapper around the three dots */
+/* Target the container around the dots */
 .vfrc-system-response--indicator .vfrc-message,
-.vfrc-system-response--indicator .vfrc-message *,
-.vfrc-system-response--indicator [class*="message"],
 .vfrc-system-response--indicator [class*="bubble"] {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 }
 
-/* Ensure the dot elements themselves have no grey background */
-.vfrc-system-response--indicator span,
-.vfrc-system-response--indicator span::before,
-.vfrc-system-response--indicator span::after {
-  background: transparent !important;
+/* Target the three dots/circles specifically */
+.vfrc-system-response--indicator .vfrc-message > div,
+.vfrc-system-response--indicator .vfrc-message span {
+  /* This is the key part: setting the individual dot color to transparent */
+  background-color: transparent !important; 
+  /* Also ensure any border/box-shadow isn't adding a visible element */
+  border: none !important;
+  box-shadow: none !important;
 }
 
