@@ -3,8 +3,6 @@
    ============================================================ */
 .voiceflow-chat,
 .voiceflow-chat * {
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif !important;
   font-size: 14px !important;
   line-height: 1.4 !important;
 }
