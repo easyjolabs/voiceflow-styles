@@ -137,9 +137,8 @@
   backdrop-filter: none !important;
   box-shadow: none !important;
 }
-
 /* ============================================================
-   USER MESSAGES WITH MATERIAL ICON
+   USER MESSAGES WITH CUSTOM ICON
    ============================================================ */
 .vfrc-user-response {
   background: transparent !important;
@@ -150,7 +149,7 @@
 .vfrc-user-response > div {
   background: #f2f2f2 !important;
   border-radius: 100px !important;
-  padding: 0.5rem 0.5rem 0.5rem 0.9rem !important; /* Adjusted padding */
+  padding: 0.5rem 0.9rem !important;
   color: #000000 !important;
   border: none !important;
   box-shadow: none !important;
@@ -159,17 +158,10 @@
   gap: 8px !important;
 }
 
-.vfrc-user-response > div::after {
-  content: "" !important;
-  width: 24px !important;
-  height: 24px !important;
-  min-width: 24px !important;
+.vfrc-user-response > div::before {
+  content: "◉" !important;
+  font-size: 16px !important;
   flex-shrink: 0 !important;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/></svg>') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  order: 2 !important; /* Places icon at the end */
 }
 
 /* ============================================================
