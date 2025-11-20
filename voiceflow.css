@@ -173,50 +173,6 @@
   border-radius: 12px !important;
 }
 
-
-/* ============================================================
-   FIX: LADEELEMENTE VOLLSTÄNDIG TRANSPARENT
-   ============================================================ */
-
-/* 1. Entfernt den Hintergrund der äußeren Blase/des Containers */
-.vfrc-system-response--indicator,
-.vfrc-system-response--indicator::before,
-.vfrc-system-response--indicator::after,
-.vfrc-system-response--indicator * {
-  /* Setzt alle Hintergründe auf transparent */
-  background: transparent !important;
-  /* Stellt sicher, dass keine Boxen oder Ränder stören */
-  box-shadow: none !important;
-  border: none !important;
-}
-
-/* 2. Entfernt speziell den Hintergrund der inneren Sprechblase */
-.vfrc-system-response--indicator .vfrc-message,
-.vfrc-system-response--indicator [class*="bubble"] {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* 3. Zielt auf die animierten Punkte/Kreise selbst ab (Häufigste Fehlerquelle) */
-/* Verwendet eine stärkere Spezifität, um sicherzustellen, dass die Farbe überschrieben wird */
-.vfrc-system-response--indicator span,
-.vfrc-system-response--indicator span::before,
-.vfrc-system-response--indicator span::after,
-.vfrc-system-response--indicator div[class*="dot"] {
-  /* Setzt die tatsächliche Füllfarbe der Punkte auf transparent */
-  background-color: transparent !important;
-  /* Oder falls die Farbe über 'color' gesetzt wird, versuchen Sie: */
-  color: transparent !important;
-  /* Fügt sicherheitshalber auch hier Ränder und Schatten hinzu */
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* Optional: falls die Animation selbst noch einen Farbwert setzt */
-.vfrc-system-response--indicator i {
-    color: transparent !important;
-}
 /* ============================================================
    CHAT INPUT — INCREASE HEIGHT BY 50%
    ============================================================ */
@@ -227,3 +183,35 @@
   min-height: 4.5rem !important;    /* previously ~3rem → +50% */
 }
 
+/* ============================================================
+   FIX: TEXTFELD UND SEND-BUTTON OBEN AUSRICHTEN
+   ============================================================ */
+
+/* 1. Setzt den Container (Wrapper) auf Flexbox und richtet Elemente oben aus */
+.vfrc-footer__content {
+  display: flex !important;
+  /* KEY: Richtet die Kindelemente (Textfeld und Button) am oberen Rand aus */
+  align-items: flex-start !important; 
+  /* Stellt sicher, dass genügend Platz zwischen den Elementen ist */
+  justify-content: space-between !important; 
+}
+
+/* 2. Fixiert das Eingabefeld selbst auf obere Ausrichtung */
+.vfrc-input-text {
+  /* Setzt die vertikale Ausrichtung der Textzeile auf den oberen Rand */
+  vertical-align: top !important; 
+  /* Stellt sicher, dass das Feld die gesamte Höhe nutzt, um Platz für die obere Ausrichtung zu schaffen */
+  height: 100% !important; 
+}
+
+/* 3. Zwingt den Sende-Button, sich ebenfalls am oberen Rand zu positionieren */
+.vfrc-send-button-wrapper,
+.vfrc-send-button {
+  align-self: flex-start !important; 
+}
+
+/* 4. Anpassung für den Text innerhalb der Textarea, falls diese zentriert ist */
+/* Dies ist oft das am tiefsten verschachtelte Element, das den Text enthält */
+.vfrc-input-text textarea {
+  vertical-align: top !important;
+}
