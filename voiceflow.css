@@ -168,15 +168,7 @@
   display: flex !important;
   align-items: flex-end !important;
 }
-/* ============================================================
-   CHAT INPUT — INCREASE HEIGHT BY 50%
-   ============================================================ */
 
-.vfrc-input-container {
-  padding-top: 1.2rem !important;   /* previously ~0.7rem → +50% */
-  padding-bottom: 1.2rem !important;
-  min-height: 4.5rem !important;    /* previously ~3rem → +50% */
-}
 
 /* ============================================================
    TYPING INDICATOR - FORCE TRANSPARENT BACKGROUND
