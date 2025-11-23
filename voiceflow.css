@@ -182,3 +182,12 @@
   background-color: transparent !important;
   background-image: none !important;
 }
+
+/* ============================================================
+   REMOVE CHAT SHADOW
+   ============================================================ */
+.vfrc-chat,
+.vfrc-chat--dialog {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
