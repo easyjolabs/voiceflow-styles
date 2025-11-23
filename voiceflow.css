@@ -191,3 +191,15 @@
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
 }
+
+/* ============================================================
+   ENABLE PULL-TO-REFRESH
+   ============================================================ */
+body {
+  min-height: 100vh;
+  overscroll-behavior-y: auto; /* Allow pull-to-refresh */
+}
+
+html {
+  overscroll-behavior-y: auto;
+}
