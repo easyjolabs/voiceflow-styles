@@ -203,3 +203,25 @@ body {
 html {
   overscroll-behavior-y: auto;
 }
+
+/* ============================================================
+   REMOVE TOP SPACING - TEXT TO THE LINE
+   ============================================================ */
+.vfrc-chat,
+.vfrc-chat--dialog,
+[data-vf-widget] {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.vfrc-header {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* First message should start at top */
+.vfrc-system-response:first-child,
+.vfrc-message:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
