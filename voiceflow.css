@@ -214,3 +214,18 @@ div.vfrc-header {
   padding: 0 !important;
   margin: 0 !important;
 }
+
+/* ============================================================
+   FADE GRADIENT AT TOP
+   ============================================================ */
+.vfrc-chat::before {
+  content: "" !important;
+  position: fixed !important;
+  top: 86px !important; /* Matches navbar height */
+  left: 0 !important;
+  right: 0 !important;
+  height: 30px !important; /* Fade height */
+  background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%) !important;
+  pointer-events: none !important; /* Click through the gradient */
+  z-index: 10 !important;
+}
