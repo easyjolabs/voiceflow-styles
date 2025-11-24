@@ -203,3 +203,14 @@ body {
 html {
   overscroll-behavior-y: auto;
 }
+/* ============================================================
+   CHAT MESSAGES - PREVENT BOTTOM CUTOFF
+   ============================================================ */
+.vfrc-chat--dialog {
+  padding-bottom: 30px !important;
+}
+
+/* Ensure messages have breathing room */
+.vfrc-message:last-child {
+  margin-bottom: 20px !important;
+}
