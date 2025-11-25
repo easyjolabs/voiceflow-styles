@@ -189,20 +189,31 @@ div.vfrc-header,
 }
 
 /* ============================================================
-   HIDE SCROLLBAR ON MOBILE
+   FIX MOBILE BOUNCE/SCROLLBAR
    ============================================================ */
 @media (max-width: 768px) {
   html, body {
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
     overflow: hidden !important;
   }
   
-  /* Hide any visible scrollbars */
-  *::-webkit-scrollbar {
+  /* Hide the scrollbar completely */
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
     display: none !important;
+    width: 0 !important;
   }
   
-  * {
-    scrollbar-width: none !important;
-    -ms-overflow-style: none !important;
+  /* Lock Hero container */
+  [data-framer-name="Hero"],
+  .framer-19yaanm,
+  .framer-1kflzx5 {
+    position: fixed !important;
+    width: 100% !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
   }
 }
