@@ -19,16 +19,17 @@
 /* ============================================================
    HEADER
    ============================================================ */
-.vfrc-header {
-  background: transparent !important;
-  box-shadow: none !important;
-  border-bottom: none !important;
-}
-
-/* Hide restart button (using nav button instead) */
+/* Hide Voiceflow header and restart button */
+.vfrc-header,
+div.vfrc-header,
 .vfrc-header--button,
 .jyiueib {
   display: none !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 /* ============================================================
@@ -137,10 +138,10 @@
   backdrop-filter: none !important;
   box-shadow: none !important;
 }
+
 /* ============================================================
-   TYPING INDICATOR - BIGGER DOTS
+   TYPING INDICATOR
    ============================================================ */
-/* Remove all backgrounds */
 .vfrc-typing-indicator--container-inner,
 ._1ayyscc1 {
   background: transparent !important;
@@ -154,25 +155,20 @@
   align-self: flex-end !important;
 }
 
-/* Bigger dots */
+/* Dots styling */
 .xaffbq2 {
   background: #E5E6EA !important;
-  width: 10px !important; /* Default is usually 6-8px */
+  width: 10px !important;
   height: 10px !important;
   min-width: 10px !important;
   min-height: 10px !important;
 }
 
-/* System response alignment */
 .vfrc-system-response--indicator {
   display: flex !important;
   align-items: flex-end !important;
 }
 
-
-/* ============================================================
-   TYPING INDICATOR - FORCE TRANSPARENT BACKGROUND
-   ============================================================ */
 .vfrc-system-response--indicator,
 .vfrc-system-response--indicator > *,
 .vfrc-system-response--indicator .vfrc-message,
@@ -184,7 +180,7 @@
 }
 
 /* ============================================================
-   REMOVE CHAT SHADOW
+   CHAT CONTAINER
    ============================================================ */
 .vfrc-chat,
 .vfrc-chat--dialog {
@@ -193,57 +189,34 @@
 }
 
 /* ============================================================
-   ENABLE PULL-TO-REFRESH
-   ============================================================ */
-body {
-  min-height: 100vh;
-  overscroll-behavior-y: auto; /* Allow pull-to-refresh */
-}
-
-html {
-  overscroll-behavior-y: auto;
-}
-
-/* ============================================================
-   HIDE VOICEFLOW HEADER
-   ============================================================ */
-.vfrc-header,
-div.vfrc-header {
-  display: none !important;
-  height: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* ============================================================
    FADE GRADIENT AT TOP
    ============================================================ */
 .vfrc-chat::before {
   content: "" !important;
   position: fixed !important;
-  top: 86px !important; /* Matches navbar height */
+  top: 86px !important;
   left: 0 !important;
   right: 0 !important;
-  height: 30px !important; /* Fade height */
+  height: 30px !important;
   background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%) !important;
-  pointer-events: none !important; /* Click through the gradient */
+  pointer-events: none !important;
   z-index: 10 !important;
 }
 
 /* ============================================================
-   MOBILE: NO SCROLL BUT PULL-TO-REFRESH
+   MOBILE: PULL-TO-REFRESH ENABLED
    ============================================================ */
-@media (max-width: 768px) {
-  html, body {
-    overflow: hidden !important;
-    height: 100vh !important;
-    position: fixed !important;
-    width: 100% !important;
-  }
-  
-  /* Allow overscroll for pull-to-refresh */
-  body {
-    overscroll-behavior-y: contain !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
+html, body {
+  overflow: visible !important;
+  overscroll-behavior-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+body {
+  min-height: 101vh !important;
+}
+
+.vfrc-chat {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
 }
