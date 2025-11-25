@@ -188,3 +188,21 @@ div.vfrc-header,
   -webkit-box-shadow: none !important;
 }
 
+/* ============================================================
+   HIDE SCROLLBAR ON MOBILE
+   ============================================================ */
+@media (max-width: 768px) {
+  html, body {
+    overflow: hidden !important;
+  }
+  
+  /* Hide any visible scrollbars */
+  *::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  * {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+}
