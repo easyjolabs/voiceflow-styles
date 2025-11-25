@@ -203,3 +203,12 @@ div.vfrc-header,
   z-index: 10 !important;
 }
 
+/* ============================================================
+   FIX FRAMER CONTAINERS SCROLLING
+   ============================================================ */
+.framer-19yaanm,
+.framer-1kflzx5 {
+  overflow: hidden !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+}
