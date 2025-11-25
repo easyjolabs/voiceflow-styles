@@ -217,3 +217,15 @@ div.vfrc-header,
     overflow: hidden !important;
   }
 }
+
+/* ============================================================
+   IOS KEYBOARD FIX
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Ensure inputs are visible above keyboard */
+  .vfrc-chat-input,
+  textarea[class*="vfrc"],
+  input[type="text"] {
+    scroll-margin-bottom: 100px !important;
+  }
+}
