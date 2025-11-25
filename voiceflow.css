@@ -189,4 +189,30 @@ div.vfrc-header,
 }
 
 
-
+/* ============================================================
+   FIX MOBILE NAVIGATION SCROLLING
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Lock body and html */
+  html, body {
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+  
+  /* Lock all Framer containers */
+  .framer-19yaanm,
+  .framer-1kflzx5,
+  [class*="framer-"] {
+    overflow: hidden !important;
+  }
+  
+  /* Lock Hero container specifically */
+  [data-framer-name="Hero"] {
+    position: fixed !important;
+    overflow: hidden !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+  }
+}
