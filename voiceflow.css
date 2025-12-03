@@ -48,7 +48,7 @@ div.vfrc-header,
 
 /* User messages */
 .vfrc-user-response {
-  background: transparent !important;
+  background: ffffff !important;
   border: none !important;
   box-shadow: none !important;
 }
@@ -68,7 +68,7 @@ div.vfrc-header,
 .vfrc-button,
 .vfrc-system-response .vfrc-button,
 .vfrc-carousel--button {
-  background: #f2f2f2 !important;
+  background: #ffffff !important;
   border-radius: 100px !important;
   border: none !important;
   padding: 0.4rem 1rem !important;
@@ -93,7 +93,7 @@ div.vfrc-header,
 
 /* Link chips */
 .vfrc-system-response a {
-  background: #f2f2f2 !important;
+  background: transparent !important;
   border-radius: 100px !important;
   padding: 0.2rem 0.6rem !important;
   text-decoration: none !important;
