@@ -48,7 +48,7 @@ div.vfrc-header,
 
 /* User messages */
 .vfrc-user-response {
-  background: #ffffff !important;
+  background: transparent !important; 
   border: none !important;
   box-shadow: none !important;
 }
