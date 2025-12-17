@@ -16,22 +16,6 @@
   background: transparent !important;
 }
 
-/* ============================================================
-   HEADER
-   ============================================================ */
-/*
-.vfrc-header,
-div.vfrc-header,
-.vfrc-header--button,
-.jyiueib {
-  display: none !important;
-  height: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-*/
 
 
 /* ============================================================
@@ -131,15 +115,6 @@ div.vfrc-header,
   box-shadow: none !important;
 }
 
-/* ============================================================
-   RESTART MENU
-   ============================================================ */
-.vfrc-prompt,
-._5x612k0 {
-  background: transparent !important;
-  backdrop-filter: none !important;
-  box-shadow: none !important;
-}
 
 /* ============================================================
    TYPING INDICATOR
