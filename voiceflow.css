@@ -19,7 +19,7 @@
 /* ============================================================
    HEADER
    ============================================================ */
-/* Hide Voiceflow header and restart button */
+/*
 .vfrc-header,
 div.vfrc-header,
 .vfrc-header--button,
@@ -31,6 +31,8 @@ div.vfrc-header,
   box-shadow: none !important;
   border: none !important;
 }
+*/
+
 
 /* ============================================================
    MESSAGES
