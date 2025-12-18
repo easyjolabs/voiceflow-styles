@@ -45,9 +45,15 @@ div.vfrc-header {
 
 /* Ensure header button + icon are visible */
 .vfrc-header--button {
-  color: #F5F5F5 !important;          /* drives currentColor in the SVG */
-  background: transparent !important;  /* keep clean header */
+  background: #ffffff !important;          /* white fill */
+  border: 1px solid #D1D5DB !important;    /* grey outline */
+  color: #111827 !important;               /* icon color (currentColor) */
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  padding: 0 !important;
   opacity: 1 !important;
+  box-shadow: none !important;
 }
 
 /* Make sure the icon inherits the color and is not faded */
