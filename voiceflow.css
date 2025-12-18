@@ -17,6 +17,24 @@
 }
 
 
+/* Header container */
+.vfrc-header,
+div.vfrc-header {
+  background: #ffffff !important;
+  border-bottom: 1px solid #E5E5E5 !important;
+  box-shadow: none !important;
+}
+
+/* Restart icon itself (SVG) */
+.vfrc-header--button svg,
+.vfrc-header__button svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke-width: 2.2 !important;
+  opacity: 0.9 !important;
+}
+
+
 
 /* ============================================================
    MESSAGES
