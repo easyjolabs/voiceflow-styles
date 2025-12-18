@@ -43,11 +43,12 @@ div.vfrc-header {
   opacity: 1 !important;
 }
 
-/* Ensure header button + icon are visible */
-.vfrc-header--button {
-  background: #ffffff !important;          /* white fill */
-  border: 1px solid #D1D5DB !important;    /* grey outline */
-  color: #111827 !important;               /* icon color (currentColor) */
+/* Voiceflow header button: force white background */
+button.vfrc-button.vfrc-header--button {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  border: 1px solid #D1D5DB !important;
+  color: #111827 !important;
   width: 44px !important;
   height: 44px !important;
   border-radius: 10px !important;
