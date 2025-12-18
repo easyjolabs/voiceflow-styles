@@ -28,8 +28,8 @@ div.vfrc-header {
 /* Restart icon itself (SVG) */
 .vfrc-header--button svg,
 .vfrc-header__button svg {
-  width: 20px !important;
-  height: 20px !important;
+  width: 16px !important;
+  height: 16px !important;
   stroke-width: 2.2 !important;
   opacity: 0.9 !important;
 }
@@ -45,7 +45,7 @@ div.vfrc-header {
 
 /* Ensure header button + icon are visible */
 .vfrc-header--button {
-  color: #111827 !important;          /* drives currentColor in the SVG */
+  color: #F5F5F5 !important;          /* drives currentColor in the SVG */
   background: transparent !important;  /* keep clean header */
   opacity: 1 !important;
 }
