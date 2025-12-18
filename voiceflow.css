@@ -34,6 +34,15 @@ div.vfrc-header {
   opacity: 0.9 !important;
 }
 
+/* SVG itself */
+.vfrc-header--icon svg {
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
+  opacity: 1 !important;
+}
+
 /* Ensure header button + icon are visible */
 .vfrc-header--button {
   color: #111827 !important;          /* drives currentColor in the SVG */
@@ -86,7 +95,7 @@ div.vfrc-header {
 .vfrc-button,
 .vfrc-system-response .vfrc-button,
 .vfrc-carousel--button {
-  background: #ffffff !important;
+   background: #F2F2F2 !important; 
   border-radius: 100px !important;
   border: none !important;
   padding: 0.4rem 1rem !important;
@@ -95,6 +104,7 @@ div.vfrc-header {
   margin: 2px 0 !important;
   transition: background 0.15s ease, transform 0.1s ease;
 }
+
 
 .vfrc-button:hover,
 .vfrc-system-response .vfrc-button:hover,
