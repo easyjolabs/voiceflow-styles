@@ -34,6 +34,20 @@ div.vfrc-header {
   opacity: 0.9 !important;
 }
 
+/* Ensure header button + icon are visible */
+.vfrc-header--button {
+  color: #111827 !important;          /* drives currentColor in the SVG */
+  background: transparent !important;  /* keep clean header */
+  opacity: 1 !important;
+}
+
+/* Make sure the icon inherits the color and is not faded */
+.vfrc-header--icon,
+.vfrc-header--icon svg {
+  color: #111827 !important;
+  opacity: 1 !important;
+}
+
 
 
 /* ============================================================
